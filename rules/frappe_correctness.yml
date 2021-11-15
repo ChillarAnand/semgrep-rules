@@ -91,15 +91,12 @@ rules:
   languages: [python]
   severity: ERROR
 
-- id: frappe-print-function-in-doctypes
-  pattern: print(...)
+- id: print-function
+  pattern: print(...
   message: |
       Did you mean to leave this print statement in? Consider using msgprint or logger instead of print statement.
   languages: [python]
   severity: WARNING
-  paths:
-      include:
-        - "*/**/doctype/*"
 
 
 - id: frappe-query-debug-statement
